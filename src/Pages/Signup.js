@@ -18,13 +18,17 @@ const Signup = () => {
                 </div>
 
                 <input type='text' placeholder='name@domain.com'></input>
-                <a className='SignupWithPhoneNumber' target='_parent'>
-                    <strong><u>Đăng ký bằng số điện thoại</u></strong>
-                </a>
+                <Link>
+                    <div className='SignupWithPhoneNumber'>
+                        <strong><u>Đăng ký bằng số điện thoại</u></strong>
+                    </div>
+                </Link>
 
-                <button className='next' type='button'>
-                    <strong>Tiếp theo</strong>
-                </button>
+                <Link>
+                    <button className='next' type='button'>
+                        <strong>Tiếp theo</strong>
+                    </button>
+                </Link>
 
                 <hr className='hr'></hr>
 

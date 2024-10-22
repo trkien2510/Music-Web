@@ -39,15 +39,19 @@ const Login = () => {
                 <div className='password'>
                     <strong>Mật khẩu</strong>
                 </div>
-                <input type='text' placeholder='Mật khẩu'></input>
+                <input type='password' placeholder='Mật khẩu'></input>
 
-                <button className='login' type='button'>
-                    <strong>Đăng nhập</strong>
-                </button>
+                <Link to='/'>
+                    <button className='login' type='button'>
+                        <strong>Đăng nhập</strong>
+                    </button>
+                </Link>
 
-                <div className='forgotpassword'>
-                    <u>Quên mật khẩu?</u>
-                </div>
+                <Link>
+                    <div className='forgotpassword'>
+                        <u>Quên mật khẩu?</u>
+                    </div>
+                </Link>
 
                 <div className='logintosignup'>
                     Bạn chưa có tài khoản?

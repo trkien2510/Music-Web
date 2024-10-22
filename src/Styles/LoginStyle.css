@@ -1,6 +1,4 @@
 body {
-    background-color: white;
-    margin: 0;
     overflow-y: auto;
 }
 
@@ -87,6 +85,7 @@ body {
 }
 
 .login {
+    width: 100%;
     background-color: rgb(13, 146, 244) !important;
     color: white;
     margin: 20px 0 20px 0 !important;
@@ -99,7 +98,12 @@ body {
 .forgotpassword {
     text-align: center;
     font-size: 1rem;
-    margin: 5px 0 5px 0;
+    margin: 5px 0 10px 0;
+    color: black;
+}
+
+.forgotpassword:hover {
+    color: blue;
 }
 
 .logintosignup {
@@ -109,4 +113,8 @@ body {
 
 .logintosignup u {
     color: black;
+}
+
+.logintosignup u:hover {
+    color: blue;
 }
