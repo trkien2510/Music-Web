@@ -1,0 +1,98 @@
+body {
+    background-color: white;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.signup_page button {
+    margin: 5px 0 5px 0;
+    height: 50px;
+    background-color: white;
+    border-radius: 100rem;
+}
+
+.signup_page input {
+    height: 30px;
+    padding: 10px;
+}
+
+.signup_page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup_form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.signup_title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.email_title {
+    font-size: 1rem;
+    margin: 10px 0 10px 0;
+}
+
+.SignupWithPhoneNumber {
+    font-size: 0.8rem;
+    margin: 10px 0 10px 0;
+    color: rgb(13, 146, 244);
+}
+
+.hr {
+    border: 1px solid black;
+    margin: 10px 0 10px;
+}
+
+.next {
+    background-color: rgb(13, 146, 244) !important;
+    color: white;
+    margin: 10px 0 10px 0 !important;
+}
+
+.next:hover {
+    background-color: blue !important;
+}
+
+.SignupWithGoogle,
+.SignupWithFacebook,
+.SignupWithApple {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(150, 150, 150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.SignupWithGoogle img,
+.SignupWithFacebook img,
+.SignupWithApple img {
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+.SignupWithGoogle:hover,
+.SignupWithFacebook:hover,
+.SignupWithApple:hover {
+    border: 2px solid rgb(35, 35, 35);
+}
+
+.signuptologin {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.signuptologin u {
+    color: black;
+}

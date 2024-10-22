@@ -1,0 +1,56 @@
+.content_2 {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(240, 240, 240);
+}
+
+.artist,
+.favorite,
+.music {
+    grid-column: inherit;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+
+.list_fav,
+.list_music,
+.list_artist {
+    max-height: 470px;
+    overflow-y: auto;
+}
+
+.list_fav::-webkit-scrollbar-thumb {
+    background-color: rgb(13, 146, 244);
+    border-radius: 10px;
+}
+
+.list_artist::-webkit-scrollbar-thumb {
+    background-color: rgb(13, 146, 244);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+}
+
+.content_2 button:hover {
+    background-color:rgb(220, 220, 220);
+}

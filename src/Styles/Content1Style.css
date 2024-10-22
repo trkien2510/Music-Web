@@ -1,0 +1,96 @@
+.content_1 {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: white;
+}
+
+.btn_home {
+    grid-column: 1;
+    margin: auto auto auto 20px;
+}
+
+.btn_home button {
+    background-color: rgb(13, 146, 244);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.btn_home button:hover{
+    background-color: blue;
+}
+
+.search {
+    grid-column: 2;
+    overflow: hidden;
+    margin: 0 100px 0 100px;
+}
+
+.search input {
+    margin: 7.5px auto 7.5px auto;
+    padding-left: 20px;
+    width: 85%;
+    height: 50px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-size: 1rem;
+}
+
+.search button {
+    margin: 7.5px auto auto auto;
+    position: absolute;
+    height: 52px;
+    width: 60px;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background-color: rgb(240, 240, 240);
+}
+
+.account {
+    grid-column: 3;
+    margin: auto 0 auto auto;
+    padding: 7.5px;
+}
+
+.account button {
+    border: none;
+    border-radius: 30px;
+    height: 52px;
+    width: 120px;
+    font-size: 1rem;
+}
+
+.btn_acc {
+    grid-column: 3;
+    margin: auto 20px auto auto;
+}
+
+.btn_acc button {
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+#btn_signup {
+    color: black;
+    margin-right: 5px;
+}
+
+#btn_signup:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+#btn_login {
+    color: white;
+    background-color: rgb(13, 146, 244);
+}
+
+#btn_login:hover{
+    background-color: blue;
+}
