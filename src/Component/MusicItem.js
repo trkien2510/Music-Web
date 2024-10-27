@@ -13,7 +13,7 @@ const MusicItem = (props) => {
                     <div className="music_artist">Artist Name</div>
                 </span>
                 <button className="add_fav" type="button">
-                    <img src={""} alt=""></img>
+                    <img src='https://cdn-icons-png.flaticon.com/512/3524/3524388.png' alt=""></img>
                 </button>
             </div>
         </div>

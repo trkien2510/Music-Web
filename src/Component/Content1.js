@@ -16,7 +16,7 @@ const Content1 = () => {
     return (
       <div className="btn_home">
         <button type="button" onClick={() => window.location.reload()}>
-          <img src={"https://cdn-icons-png.flaticon.com/512/9280/9280598.png"} width="25px" height="25px" alt="" />
+          <img src='https://cdn-icons-png.flaticon.com/512/69/69524.png' width="25px" height="25px" alt="" />
         </button>
       </div>
     );
@@ -27,7 +27,7 @@ const Content1 = () => {
       <div className="search">
         <input type="text" placeholder="Tìm kiếm" />
         <button>
-          <img src={"https://cdn-icons-png.flaticon.com/512/9280/9280598.png"} width="25px" height="25px" alt="" />
+          <img src='https://cdn-icons-png.flaticon.com/512/3031/3031293.png' width="25px" height="25px" alt="" />
         </button>
       </div>
     );

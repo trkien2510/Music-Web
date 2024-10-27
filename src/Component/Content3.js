@@ -19,7 +19,7 @@ const Content3 = () => {
                     <div className="music_artist">Artist Name</div>
                 </div>
                 <button type="button">
-                    <img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' width="10px" height="10px" alt=""></img>
+                    <img src='https://cdn-icons-png.flaticon.com/512/3524/3524388.png' width="10px" height="10px" alt=""></img>
                 </button>
             </div>
         )
@@ -58,7 +58,7 @@ const Content3 = () => {
         return (
             <div className="volume">
                 <input type="range" className="volume_slider" value="50" min="0" max="100"></input>
-                <span><img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' width="20px" height="20px" alt=""></img></span>
+                <span><img src='https://cdn-icons-png.flaticon.com/512/17916/17916372.png' width="20px" height="20px" alt=""></img></span>
             </div>
         )
     }

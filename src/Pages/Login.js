@@ -12,17 +12,17 @@ const Login = () => {
                 </div>
 
                 <button className='LoginWithGoogle' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' alt='Google Logo' />
+                    <img src='https://cdn-icons-png.flaticon.com/512/281/281764.png' alt='Google Logo' />
                     <strong>Tiếp tục bằng Google</strong>
                 </button>
 
                 <button className='LoginWithFacebook' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' alt='Facebook Logo' />
+                    <img src='https://cdn-icons-png.flaticon.com/512/5968/5968764.png' alt='Facebook Logo' />
                     <strong>Tiếp tục bằng Facebook</strong>
                 </button>
 
                 <button className='LoginWithApple' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' alt='Apple Logo' />
+                    <img src='https://cdn-icons-png.flaticon.com/512/0/747.png' alt='Apple Logo' />
                     <strong>Tiếp tục bằng Apple</strong>
                 </button>
 

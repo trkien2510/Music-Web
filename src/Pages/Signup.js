@@ -33,17 +33,17 @@ const Signup = () => {
                 <hr className='hr'></hr>
 
                 <button className='SignupWithGoogle' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' alt='Google Logo' />
+                    <img src='https://cdn-icons-png.flaticon.com/512/281/281764.png' alt='Google Logo' />
                     <strong>Đăng ký bằng Google</strong>
                 </button>
 
                 <button className='SignupWithFacebook' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' alt='Facebook Logo' />
+                    <img src='https://cdn-icons-png.flaticon.com/512/5968/5968764.png' alt='Facebook Logo' />
                     <strong>Đăng ký bằng Facebook</strong>
                 </button>
 
                 <button className='SignupWithApple' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/9280/9280598.png' alt='Apple Logo' />
+                    <img src='https://cdn-icons-png.flaticon.com/512/0/747.png' alt='Apple Logo' />
                     <strong>Đăng ký bằng Apple</strong>
                 </button>
 
