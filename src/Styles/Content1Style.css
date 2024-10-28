@@ -67,10 +67,12 @@
 .btn_acc {
     grid-column: 3;
     margin: auto 20px auto auto;
+    background-color: rgb(13, 146, 244);
+    border-radius: 50%;
 }
 
 .btn_acc button {
-    background-color: black;
+    background-color: transparent;
     border-radius: 50%;
     border: none;
     width: 50px;

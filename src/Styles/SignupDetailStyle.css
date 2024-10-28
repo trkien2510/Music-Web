@@ -1,0 +1,41 @@
+.signup_detail_page {
+    margin: 0px;
+    padding: 10px;
+}
+
+.signup_detail_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: auto;
+}
+
+.signup_detail_form input {
+    height: 30px;
+    padding-left: 5px;
+}
+
+.signup_detail_form select {
+    height: 35px;
+}
+
+.birthdate_inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: auto;
+    height: 30px;
+}
+
+.signup {
+    background-color: rgb(13, 146, 244);
+    height: 50px;
+    border-radius: 100rem;
+    color: white;
+    margin-top: 20px;
+}
+
+.signup:hover {
+    background-color: blue;
+}

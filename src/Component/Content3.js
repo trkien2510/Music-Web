@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/Content3Style.css';
 
 const Content3 = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        setIsLoggedIn(!!token);
+    }, []);
+
     return (
         <div className="content_3">
-            <Info></Info>
-            <Interactive></Interactive>
-            <Volume></Volume>
+            {isLoggedIn ? (
+                <>
+                    <Info></Info>
+                    <Interactive></Interactive>
+                    <Volume></Volume>
+                </>
+            ) : (
+                <EmptyContent></EmptyContent>
+            )}
+
         </div>
     );
 
@@ -59,6 +73,14 @@ const Content3 = () => {
             <div className="volume">
                 <input type="range" className="volume_slider" value="50" min="0" max="100"></input>
                 <span><img src='https://cdn-icons-png.flaticon.com/512/17916/17916372.png' width="20px" height="20px" alt=""></img></span>
+            </div>
+        )
+    }
+
+    function EmptyContent() {
+        return (
+            <div className='empty'>
+                Đăng ký để nghe các bài hát
             </div>
         )
     }

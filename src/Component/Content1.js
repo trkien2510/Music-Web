@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/Content1Style.css';
 import { Link } from 'react-router-dom';
 
 const Content1 = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    setIsLoggedIn(!!token);
+  }, []);
+
   return (
     <div className="content_1">
       <BtnHome />
       <Search />
-      <Account />
-      {/* <Acc></Acc> */}
+      {isLoggedIn ? <Acc /> : <Account />}
     </div>
   );
 
@@ -51,11 +57,16 @@ const Content1 = () => {
   function Acc() {
     return (
       <div className="btn_acc">
-        <button id="btn_acc" type="button">
+        <button id="btn_acc" type="button" onClick={handleLogout}>
           <img src={"https://cdn-icons-png.flaticon.com/512/9280/9280598.png"} width="25px" height="25px" alt="" />
         </button>
       </div>
     );
+  }
+
+  function handleLogout() {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
   }
 };
 

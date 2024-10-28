@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Styles/SignupStyle.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+    const [email, setEmail] = useState('');
+    const [error, setError] = useState(null);
+    const navigate = useNavigate();
+
+    const handleSignup = () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setError('Vui lòng nhập một địa chỉ email hợp lệ');
+            return;
+        }
+
+        navigate('/signup-details', { state: { email } });
+    };
+
     return (
         <div className="signup_page">
             <div className='signup_form'>
@@ -17,18 +31,27 @@ const Signup = () => {
                     <strong>Địa chỉ Email</strong>
                 </div>
 
-                <input type='text' placeholder='name@domain.com'></input>
+                <input
+                    type='text'
+                    placeholder='name@domain.com'
+                    value={email}
+                    onChange={(e) => {
+                        setEmail(e.target.value);
+                        setError(null);
+                    }}
+                />
+
+                {error && <div className="error">{error}</div>}
+
                 <Link>
                     <div className='SignupWithPhoneNumber'>
                         <strong><u>Đăng ký bằng số điện thoại</u></strong>
                     </div>
                 </Link>
 
-                <Link>
-                    <button className='next' type='button'>
-                        <strong>Tiếp theo</strong>
-                    </button>
-                </Link>
+                <button className='next' type='button' onClick={handleSignup}>
+                    <strong>Tiếp theo</strong>
+                </button>
 
                 <hr className='hr'></hr>
 
