@@ -1,0 +1,52 @@
+.audio-controller-container{
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.audio-controller-container img{
+    width: 100%;
+    height: 100%;
+}
+.audio-controller-container .audio-info{
+    display: flex;
+    align-items: center;
+}
+.audio-info .audio-info-thumbnail{
+    height: 4rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.audio-info .des{
+    display: flex;
+    flex-direction: column;
+}
+.audio-info .favorite-btn{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.audio-controller-container .audio-controller{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#audio-player{
+    width: 95%;
+    margin: 0 1rem;
+}
+audio::-webkit-media-controls-panel{
+
+}
+audio::-webkit-media-controls-current-time-display{
+    color: rgb(13, 146, 244);
+}

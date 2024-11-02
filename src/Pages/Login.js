@@ -1,45 +1,30 @@
 import React, { useState } from 'react';
 import '../Styles/LoginStyle.css';
 import { Link, useNavigate } from 'react-router-dom';
+import login from '../Service/LoginService';
 
 const Login = () => {
-    const [usernameOrEmail, setUsernameOrEmail] = useState('');
-    const [password, setPassword] = useState('');
+
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
+        e.preventDefault();
         setError(null);
-
-        const loginData = {
-            usernameOrEmail,
-            password
-        };
-
-        if (!usernameOrEmail || !password) {
-            setError('Vui lòng nhập email hoặc tên người dùng và mật khẩu.');
+        const username = document.getElementById("login-username").value;
+        const password = document.getElementById("login-password").value;
+        if (username == "" || password == "") {
+            setError('Vui lòng nhập tên người dùng và mật khẩu.');
             return;
         }
-
-        try {
-            const response = await fetch('http://localhost:8080/api/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(loginData)
-            });
-
-            if (!response.ok) {
-                throw new Error('Email hoặc mật khẩu không đúng!');
-            }
-
-            const data = await response.json();
-            localStorage.setItem('token', data.token);
-
+        const data = await login(username, password)
+        console.log(data)
+        if(data.code == 200){
+            localStorage.setItem('token', data.data.token);
+            localStorage.setItem('username', username);
             navigate('/');
-        } catch (error) {
-            setError(error.message = 'Email hoặc mật khẩu không đúng!');
+        }else{
+            setError(error.message = 'Username hoặc mật khẩu không đúng!');
         }
     };
 
@@ -51,58 +36,29 @@ const Login = () => {
                     <strong>Đăng nhập</strong>
                 </div>
 
-                {/* Các nút đăng nhập bằng dịch vụ bên ngoài */}
-                <button className='LoginWithGoogle' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/281/281764.png' alt='Google Logo' />
-                    <strong>Tiếp tục bằng Google</strong>
-                </button>
-
-                <button className='LoginWithFacebook' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/5968/5968764.png' alt='Facebook Logo' />
-                    <strong>Tiếp tục bằng Facebook</strong>
-                </button>
-
-                <button className='LoginWithApple' type='button'>
-                    <img src='https://cdn-icons-png.flaticon.com/512/0/747.png' alt='Apple Logo' />
-                    <strong>Tiếp tục bằng Apple</strong>
-                </button>
-
-                <button className='LoginWithPhoneNumber' type='button'>
-                    <strong>Tiếp tục bằng số điện thoại</strong>
-                </button>
-
-                <hr className='hr' />
-
-                <div className='emailorusername'>
-                    <strong>Email hoặc tên người dùng</strong>
-                </div>
-                <input 
-                    type='text' 
-                    placeholder='Email hoặc tên người dùng' 
-                    value={usernameOrEmail} 
-                    onChange={(e) => setUsernameOrEmail(e.target.value)} 
-                />
-                <div className='password'>
-                    <strong>Mật khẩu</strong>
-                </div>
-                <input
-                    type='password'
-                    placeholder='Mật khẩu'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-
-                {error && <div className="error">{error}</div>} {/* Hiển thị thông báo lỗi */}
-
-                <button className='login' type='button' onClick={handleLogin}>
-                    <strong>Đăng nhập</strong>
-                </button>
-
-                <Link>
-                    <div className='forgotpassword'>
-                        <u>Quên mật khẩu?</u>
+                <form onSubmit={handleLogin}>
+                    <div className='emailorusername'>
+                        <strong>Username</strong>
                     </div>
-                </Link>
+                    <input 
+                        id='login-username'
+                        type='text' 
+                        placeholder='Username'/>
+
+                    <div className='password'>
+                        <strong>Mật khẩu</strong>
+                    </div>
+                    <input
+                        id='login-password'
+                        type='password'
+                        placeholder='Mật khẩu'/>
+
+                    {error && <div className="error" style={{color: 'red'}}>{error}</div>} {/* Hiển thị thông báo lỗi */}
+
+                    <button className='login' type='submit'>
+                        <strong>Đăng nhập</strong>
+                    </button>
+                </form>
 
                 <div className='logintosignup'>
                     Bạn chưa có tài khoản?

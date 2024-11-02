@@ -1,0 +1,38 @@
+.profile-container{
+    height: 70vh;
+    overflow: hidden;
+    width: 80%;
+    background-color: white;
+    margin: 6rem auto 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+    display: flex;
+    flex-direction: column;
+}
+.profile-container img{
+    width: 100%;
+    height: 100%;
+}
+.profile-container .profile-info{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+.profile-container .profile-info .info-avatar{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.profile-container .profile-info .info-nickname{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+.profile-container .profile-song-upload{
+    overflow: scroll;
+}
+.profile-container h1 {
+    margin: 0 1rem;
+    padding: 0;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,157 @@
+.content_1 {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    height: 5rem;
+    grid-row: 1;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.btn_home {
+    margin: 0 1rem;
+    background-color: rgb(13, 146, 244);
+    padding: 1rem;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btn_home button {
+    background-color: rgb(13, 146, 244);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.btn_home button:hover{
+    background-color: blue;
+}
+
+.search {
+    /* overflow: hidden; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search input {
+    padding-left: 20px;
+    width: 85%;
+    height: 50px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-size: 1rem;
+}
+
+.search button {
+    height: 52px;
+    width: 60px;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background-color: rgb(240, 240, 240);
+}
+
+.account {
+    display: flex;
+    margin-right: 1rem;
+}
+
+.account button {
+    border: none;
+    border-radius: 30px;
+    height: 52px;
+    width: 120px;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.btn_acc {
+    grid-column: 3;
+    margin: auto 20px auto auto;
+    background-color: rgb(13, 146, 244);
+    border-radius: 50%;
+}
+
+.btn_acc button {
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+#btn_signup {
+    color: black;
+    margin-right: 5px;
+}
+
+#btn_signup:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+#btn_login {
+    color: white;
+    background-color: rgb(13, 146, 244);
+}
+
+#btn_login:hover{
+    background-color: blue;
+}
+.logined-container{
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: rgb(240, 240, 240);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+}
+.logined-container .avatar{
+    width: 2rem;
+    margin-right: 1rem;
+}
+.logined-container img{
+    width: 100%;
+    height: 100%;
+}
+.logined-container .options{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    padding-top: 2rem;
+    list-style: none;
+    width: 8rem;
+    display: none;
+    flex-direction: column;
+
+}
+.logined-container .options li{
+    text-align: center;
+    cursor: pointer;
+    height: 2rem;
+    background-color: white;
+    margin: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+    width: 10rem;
+}
+.logined-container .options li a{
+    color: black;
+    text-decoration: none;
+}
+.logined-container:hover .options{
+    display: flex;
+}
+
+

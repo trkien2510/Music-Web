@@ -1,0 +1,47 @@
+.upload-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem auto 0 auto;
+}
+.upload-container img{
+    width: 100%;
+    height: 100%;
+}
+.upload-container input{
+    margin: 1rem;
+
+}
+.upload-thumbnail{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.upload-container label{
+    background-color: white;
+    width: 10rem;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+    cursor: pointer;
+}
+.upload-container #input-name{
+    padding: 0.2rem;
+    outline: none;
+    border: none;
+    width: 20rem;
+}
+.upload-container button{
+    background-color: rgb(219, 129, 129);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+    font-size: 1.5rem;
+}
